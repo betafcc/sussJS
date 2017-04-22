@@ -42,7 +42,7 @@ import { flow,
          map, filter, forEach } from '@betafcc/suss';
 
 // Log all even squares
-flow(naturals(),
+flow(naturals())(
     map(x => x*x),
     filter(x => x % 2 === 0),
     forEach(el => console.log(el)),

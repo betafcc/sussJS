@@ -31,7 +31,7 @@ const reduce = (func) =>
 const pipe = (...funcs) =>
     reduce(compose)(id)(funcs.reverse());
 
-const flow = (initial, ...funcs) =>
+const flow = (initial) => (...funcs) =>
     pipe(...funcs)(initial);
 
 export {

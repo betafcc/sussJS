@@ -1,11 +1,11 @@
 {
-  "name": "@betafcc/sussjs",
+  "name": "@betafcc/suss",
   "version": "0.0.0",
   "description": "Micro Framework for JS Iterables",
   "main": "dist/index.js",
   "scripts": {
     "clean": "rimraf dist",
-    "build": "npm run clean && cpr src/** dist/",
+    "build": "npm run clean && babel --out-dir dist src/",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -27,7 +27,8 @@
   },
   "homepage": "https://github.com/betafcc/sussJS#readme",
   "devDependencies": {
-    "cpr": "2.0.2",
+    "babel-cli": "6.24.1",
+    "babel-preset-env": "1.4.0",
     "rimraf": "2.6.1"
   }
 }

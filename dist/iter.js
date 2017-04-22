@@ -1,32 +1,7 @@
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.suss = undefined;
-
-var _functools = require('./functools.js');
-
-Object.keys(_functools).forEach(function (key) {
-  if (key === "default" || key === "__esModule") return;
-  Object.defineProperty(exports, key, {
-    enumerable: true,
-    get: function get() {
-      return _functools[key];
-    }
-  });
-});
-
-var _itertools = require('./itertools.js');
-
-Object.keys(_itertools).forEach(function (key) {
-  if (key === "default" || key === "__esModule") return;
-  Object.defineProperty(exports, key, {
-    enumerable: true,
-    get: function get() {
-      return _itertools[key];
-    }
-  });
+    value: true
 });
 
 require('core-js/modules/es6.typed.array-buffer');
@@ -201,11 +176,51 @@ require('core-js/modules/web.dom.iterable');
 
 require('regenerator-runtime/runtime');
 
-var _iter = require('./iter.js');
+var _functools = require('./functools.js');
 
-var _iter2 = _interopRequireDefault(_iter);
+var _itertools = require('./itertools.js');
 
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
-exports.default = _iter2.default;
-exports.suss = _iter2.default;
+var iter = function iter(iterable) {
+    return _defineProperty({
+        map: function map(func) {
+            return iter((0, _functools.map)(func)(iterable));
+        },
+        filter: function filter(func) {
+            return iter((0, _functools.filter)(func)(iterable));
+        },
+        reduce: function reduce(func, initial) {
+            return (0, _functools.reduce)(func)(initial)(iterable);
+        },
+
+        len: function len() {
+            return (0, _itertools.len)(iterable);
+        },
+        flatten: function flatten() {
+            return iter((0, _itertools.flatten)(iterable));
+        },
+        forEach: function forEach(func) {
+            return (0, _itertools.forEach)(func)(iterable);
+        },
+
+        lift: function lift(func) {
+            return func(iterable);
+        }
+    }, Symbol.iterator, regeneratorRuntime.mark(function _callee() {
+        return regeneratorRuntime.wrap(function _callee$(_context) {
+            while (1) {
+                switch (_context.prev = _context.next) {
+                    case 0:
+                        return _context.delegateYield(iterable, 't0', 1);
+
+                    case 1:
+                    case 'end':
+                        return _context.stop();
+                }
+            }
+        }, _callee, this);
+    }));
+};
+
+exports.default = iter;

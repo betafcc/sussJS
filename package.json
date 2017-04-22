@@ -1,0 +1,33 @@
+{
+  "name": "@betafcc/sussjs",
+  "version": "0.0.0",
+  "description": "Micro Framework for JS Iterables",
+  "main": "dist/index.js",
+  "scripts": {
+    "clean": "rimraf dist",
+    "build": "npm run clean && cpr src/** dist/",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/betafcc/sussJS.git"
+  },
+  "keywords": [
+    "iterable",
+    "iterator",
+    "generator",
+    "functional",
+    "utility",
+    "micro"
+  ],
+  "author": "Beta Faccion <betafcc@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/betafcc/sussJS/issues"
+  },
+  "homepage": "https://github.com/betafcc/sussJS#readme",
+  "devDependencies": {
+    "cpr": "2.0.2",
+    "rimraf": "2.6.1"
+  }
+}

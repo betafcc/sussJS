@@ -1,3 +1,10 @@
+# TODO
+- [x] Make a working starting point
+- [ ] Convert to bundled entry point
+- [ ] Add Tests
+- [ ] Convert to TypeScript
+- [ ] Release
+
 # süß/JS
 
 **süß** &nbsp; _/zyːs/_ <br>

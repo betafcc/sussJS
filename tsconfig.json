@@ -1,0 +1,10 @@
+{
+    "compilerOptions": {
+        "sourceMap": true,
+        "declaration": true,
+        "target": "es2017",
+        "module": "es2015",
+        "noImplicitAny": true,
+        "typeRoots": ["node_modules/@types"]
+    }
+}

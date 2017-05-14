@@ -3,10 +3,12 @@
   "version": "0.0.0",
   "description": "Micro Framework for JS Iterables",
   "main": "dist/index.js",
+  "typings": "dist/src/index.d.ts",
   "scripts": {
     "clean": "rimraf dist",
-    "build": "npm run clean && babel --out-dir dist src/",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "npm run clean && NODE_ENV=production  webpack",
+    "dev"  : "npm run clean && NODE_ENV=development webpack --watch",
+    "test" : "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
@@ -27,8 +29,12 @@
   },
   "homepage": "https://github.com/betafcc/sussJS#readme",
   "devDependencies": {
-    "babel-cli": "6.24.1",
+    "babel-core": "6.24.1",
+    "babel-loader": "7.0.0",
     "babel-preset-env": "1.4.0",
-    "rimraf": "2.6.1"
+    "rimraf": "2.6.1",
+    "ts-loader": "2.0.3",
+    "typescript": "2.3.2",
+    "webpack": "2.5.1"
   }
 }

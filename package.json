@@ -1,14 +1,14 @@
 {
   "name": "@betafcc/suss",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Micro Library for JS Iterables",
   "main": "dist/index.js",
   "typings": "dist/src/index.d.ts",
   "scripts": {
     "clean": "rimraf dist",
     "build": "npm run clean && NODE_ENV=production  webpack",
-    "dev"  : "npm run clean && NODE_ENV=development webpack --watch",
-    "test" : "echo \"Error: no test specified\" && exit 1"
+    "dev": "npm run clean && NODE_ENV=development webpack --watch",
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
@@ -31,6 +31,7 @@
   "devDependencies": {
     "babel-core": "6.24.1",
     "babel-loader": "7.0.0",
+    "babel-plugin-transform-regenerator": "6.24.1",
     "babel-preset-env": "1.4.0",
     "rimraf": "2.6.1",
     "ts-loader": "2.0.3",

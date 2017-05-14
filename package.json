@@ -1,7 +1,7 @@
 {
   "name": "@betafcc/suss",
-  "version": "0.0.0",
-  "description": "Micro Framework for JS Iterables",
+  "version": "0.1.0",
+  "description": "Micro Library for JS Iterables",
   "main": "dist/index.js",
   "typings": "dist/src/index.d.ts",
   "scripts": {

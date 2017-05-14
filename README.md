@@ -1,9 +1,9 @@
 # TODO
 - [x] Make a working starting point
-- [ ] Convert to bundled entry point
+- [X] Convert to bundled entry point
 - [ ] Add Tests
-- [ ] Convert to TypeScript
-- [ ] Release
+- [X] Convert to TypeScript
+- [X] Release
 
 # süß/JS
 

@@ -33,7 +33,7 @@ function* naturals() {
 
 Use the Fluent API:
 ```js
-import suss from '@betafcc/suss';
+import {suss} from '@betafcc/suss';
 
 // Log all even squares
 suss(naturals())

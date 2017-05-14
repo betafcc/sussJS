@@ -13,7 +13,6 @@
 &emsp; _noun_ <br>
 &emsp;&emsp; the sound iteration makes over pure functional pipes
 
-<!-- Micro Framework for Lazy Iterations in JS -->
 
 Install
 -------
